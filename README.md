@@ -1,25 +1,50 @@
 # policy-market-fused-report
 
-This package keeps the existing `npx policy-market-fused-report` install command, but it now installs one canonical skill: `skills/strategy-policy-market-report/`.
+Give this skill a company name and it produces one report combining two
+independently-evidenced lines of analysis: a **policy/institutional-risk**
+read (grounded in a bundled library of real government/institutional
+analysis methods) and a **commercial/market** read (market sizing,
+competitive positioning, source-tiered evidence). One shared research pass
+covers both; the output is Markdown by default, with optional HTML/PDF
+rendering.
 
-The unified skill is provider-neutral in its workflow and output contract:
+**This is a [Claude Code](https://claude.com/claude-code) skill.** The
+automated install below only works there — see "Don't have Claude Code?"
+further down if you're on a different AI tool.
 
-- Minimum input is a company name.
-- Markdown is the baseline deliverable.
-- HTML and PDF are optional renderings when the host can run the bundled Python helpers and has Chrome or Chromium available.
-- Live research depends on the host's search and fetch capabilities; when they are unavailable, the skill falls back to a clearly limited Markdown report instead of fabricating current claims.
+- Minimum input: a company name.
+- Markdown is always the baseline deliverable — never blocked by missing
+  optional capabilities.
+- HTML and PDF are optional renderings, produced when the host can run the
+  bundled Python helpers and has Chrome/Chromium available.
+- One live research pass covers both the policy and commercial angle —
+  never a duplicated second search.
+- Company-specific claims require a captured source URL and date; the
+  bundled policy-method catalog is never extended with invented methods.
+- If live research is unavailable, the skill says so explicitly rather than
+  fabricating current claims.
 
 ## Install
 
-**This automated install only works with [Claude Code](https://claude.com/claude-code)** — the `npx` command just copies files into a `.claude/skills/` folder, which only Claude Code reads. If you don't have Claude Code, skip to "Don't have Claude Code?" below instead.
-
-This package is not published to the npm registry, so `npx policy-market-fused-report` will fail with a 404 unless you run it from inside a local clone of this repo. Steps:
+This package is **not published to the npm registry** — `npx
+policy-market-fused-report` only resolves if you run it from inside a local
+clone of this repo. Running it from anywhere else fails with a 404.
 
 ```bash
 git clone https://github.com/nevvveahlee-design/policy-market-fused-report.git
 cd policy-market-fused-report
 npx policy-market-fused-report            # installs to ~/.claude/skills/ (all projects)
 npx policy-market-fused-report --project  # installs to ./.claude/skills/ (current project only)
+```
+
+The installed skill directory is:
+
+```text
+strategy-policy-market-report
+```
+
+**Restart Claude Code after installing** — it only picks up new skills on
+startup, not mid-session.
 
 ## Don't have Claude Code?
 
@@ -68,7 +93,8 @@ Supported output behavior:
 - `html`: optional rendering when Python-based deck generation is available
 - `pdf`: optional rendering when HTML generation is available and Chrome/Chromium can export PDF
 
-If optional rendering is unavailable, the skill should still return the Markdown report and record the limitation explicitly.
+If optional rendering is unavailable, the skill still returns the Markdown
+report and records the limitation explicitly instead of failing.
 
 ## What Gets Installed
 
@@ -80,36 +106,45 @@ skills/strategy-policy-market-report/
 
 That package contains:
 
-- `SKILL.md`: the canonical workflow contract
-- `references/`: bundled method catalog, evidence, and portability guidance
-- `scripts/run_report.py`: Markdown report generator
-- `scripts/build_deck.py`: optional HTML/PDF wrapper
-- `assets/deck_engine.py`: project-owned deck rendering primitives
+- `SKILL.md` — the canonical workflow contract
+- `references/` — bundled method catalog, evidence, and portability guidance
+- `scripts/run_report.py` — Markdown report generator
+- `scripts/build_deck.py` — optional HTML/PDF wrapper
+- `scripts/validate_deck.py` — structural QC for rendered decks
+- `assets/deck_engine.py` — project-owned deck rendering primitives
+- `agents/openai.yaml` — a compatibility manifest for OpenAI-style hosts
 
 ## Provider-Neutral Contract
 
-The skill is written so an AI host can map its own capabilities onto a small generic set:
+The skill's workflow logic is written so an AI host can map its own
+capabilities onto a small generic set, rather than hard-coding a specific
+vendor's tool names:
 
 - `web_search`
 - `fetch`
 - `write_file`
 - `run_python`
 
-See `skills/strategy-policy-market-report/references/portability.md` for the host capability mapping in the repository copy. If a host lacks one or more capabilities, the fallback is to preserve the Markdown workflow and note the limitation rather than fail the task.
+See `skills/strategy-policy-market-report/references/portability.md` for
+the full host-capability mapping and fallback rules. If a host lacks one or
+more capabilities, the fallback is to preserve the Markdown workflow and
+note the limitation rather than fail the task.
 
 ## Repository Layout
 
 ```text
-bin/cli.js
-skills/strategy-policy-market-report/
-tests/test_cli_installer.js
-tests/test_report_contract.py
-tests/test_deck_validation.py
+bin/cli.js                            installer (see Install above)
+skills/strategy-policy-market-report/ the only skill package — original work
+tests/                                pytest + node test suite
+docs/superpowers/                     the implementation plan and design spec
 ```
 
-`skills/strategy-policy-market-report/` is the only skill package in this
-repository — everything under it, including `assets/deck_engine.py`, is
-original work.
+## Testing
+
+```bash
+python -m pytest -q tests/
+node tests/test_cli_installer.js
+```
 
 ## Licensing
 
