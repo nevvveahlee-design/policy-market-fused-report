@@ -1,0 +1,31 @@
+{
+  "name": "policy-market-fused-report",
+  "version": "1.0.0",
+  "description": "Installer for the unified strategy-policy-market-report skill: a provider-neutral company analysis workflow with a Markdown baseline and optional HTML/PDF rendering.",
+  "bin": {
+    "policy-market-fused-report": "bin/cli.js"
+  },
+  "scripts": {
+    "smoke:installer": "node tests/test_cli_installer.js"
+  },
+  "files": [
+    "bin",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "agent-skills",
+    "strategy",
+    "policy-analysis",
+    "market-research",
+    "evidence-grounding",
+    "markdown",
+    "html",
+    "pdf"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.7.0"
+  }
+}

@@ -1,0 +1,16 @@
+interface:
+  display_name: "Strategy Policy Market Report"
+  short_description: "Produce a company analysis report from company, scope, and format inputs"
+  input_fields:
+    required:
+      - company
+    optional:
+      - business_unit
+      - geography
+      - period
+      - output_format
+    fallback_behavior:
+      - "If company is missing, ask only for company."
+      - "If live research is unavailable, return Markdown with a limitations note."
+      - "If HTML or PDF rendering is unavailable, return Markdown instead of failing."
+  default_prompt: "Use $strategy-policy-market-report to turn my company analysis request into the canonical Markdown report. Required input: company. Optional scope fields: business_unit, geography, period, output_format. If company is missing, ask only for that field. If live research or HTML/PDF rendering is unavailable, return Markdown with a clear limitations note instead of failing."

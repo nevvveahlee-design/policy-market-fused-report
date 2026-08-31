@@ -1,0 +1,1875 @@
+[
+  {
+    "created_at": "2026-08-20T08:58:31.536871Z",
+    "updated_at": "2026-08-20T08:58:31.536871Z",
+    "skill_id": "S000033",
+    "name": "Evaluate Life-Cycle Phase Distribution of Environmental Impact",
+    "canonical_name": "Life-Cycle Environmental Impact Decomposition",
+    "description": "Decomposes a product or technology's overall environmental footprint by life-cycle phase (raw material extraction/production, use/operation, end-of-life/disposal) to identify which phase drives the majority of impact, and to test common assumptions (e.g., that a technology is 'dematerialized' or low-impact) against underlying life-cycle evidence.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "evaluate_lifecycle_environmental_impact",
+    "industry_tags": [
+      "digital_economy",
+      "sustainability"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "For a given product or technology category, which stage of its life cycle (production, use, or disposal) contributes most to its overall environmental footprint, and does this contradict prevailing assumptions about the technology's impact profile?",
+    "required_inputs": [
+      "life-cycle assessment or research data on emissions/impact shares by phase for the product category",
+      "a list of comparable product sub-types within the category, if impact drivers differ by sub-type"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Define the life-cycle phases relevant to the product or technology (e.g., raw material extraction/production, use/operation, end-of-life/disposal)."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Collect or estimate the share of total environmental impact (emissions, resource extraction, water use, etc.) attributable to each phase, drawing on available life-cycle assessment research."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Identify which phase dominates the footprint, and check whether this outcome challenges a prevailing narrative or assumption about the technology (e.g., an assumption of low impact due to perceived intangibility)."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Segment the analysis by product sub-type where evidence indicates the dominant phase varies, to avoid over-generalizing across a category."
+      }
+    ],
+    "expected_outputs": [
+      "a phase-by-phase breakdown of environmental impact share for the product/technology category",
+      "identification of the dominant impact phase and any sub-type variation",
+      "an assessment of whether prevailing assumptions about the technology's environmental profile hold up against the evidence"
+    ],
+    "limitations": [
+      "Requires availability of credible life-cycle assessment research or data; if such data does not exist for the target category, the method cannot be executed.",
+      "Findings are only as reliable as the underlying life-cycle assessment methodology and may vary depending on system boundaries chosen by the original researchers."
+    ],
+    "source_report_ids": [
+      "R000009"
+    ],
+    "source_evidence_ids": [
+      "E000624",
+      "E000625",
+      "E000626",
+      "E000635",
+      "E000636"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-20T08:58:31.557298Z",
+    "updated_at": "2026-08-20T08:58:31.557298Z",
+    "skill_id": "S000034",
+    "name": "Benchmark Rapidly Scaling Infrastructure's Resource Consumption Against Local Capacity",
+    "canonical_name": "Infrastructure Resource Consumption Benchmarking",
+    "description": "Assesses how significant a rapidly growing category of infrastructure's resource consumption (e.g., electricity, water) is relative to comparable local, regional, or national baselines, and tracks resulting regulatory or capacity responses, in order to surface localized resource-strain risk that aggregate global figures may obscure.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "benchmark_infrastructure_resource_consumption",
+    "industry_tags": [
+      "digital_economy",
+      "sustainability"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "How does a rapidly scaling infrastructure category's resource consumption compare to relevant local or national capacity baselines, and where has this triggered regulatory intervention?",
+    "required_inputs": [
+      "historical and current resource consumption data for the infrastructure category, ideally with a multi-year growth trend",
+      "comparable local/regional/national total consumption figures for benchmarking",
+      "records of any regulatory responses (e.g., moratoria, conditions, permitting changes) in jurisdictions with high infrastructure concentration"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Quantify the infrastructure category's resource consumption and its growth trajectory over the available historical period."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Benchmark the current and projected consumption level against a comparable local, regional, or national total consumption figure to contextualize the scale of the impact."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Identify specific jurisdictions where the infrastructure's share of local resource consumption is disproportionately high or growing fastest, since aggregate global figures can mask acute local strain."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Survey whether local or national authorities have introduced regulatory responses in these high-concentration jurisdictions, and assess whether the response followed or preceded the strain."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Evaluate whether efficiency improvements are sufficient to offset continued consumption growth, noting any structural or physical limits to such improvements."
+      }
+    ],
+    "expected_outputs": [
+      "a set of benchmark comparisons contextualizing the infrastructure's resource consumption against familiar baselines",
+      "a shortlist of jurisdictions facing acute local resource strain",
+      "a summary of regulatory responses observed and their relationship to strain severity"
+    ],
+    "limitations": [
+      "Requires granular, jurisdiction-level consumption data, which may not be publicly available for all regions.",
+      "Benchmarking against a single comparator is illustrative rather than a rigorous capacity-constraint analysis, and does not account for how flexible or constrained the local supply actually is."
+    ],
+    "source_report_ids": [
+      "R000009"
+    ],
+    "source_evidence_ids": [
+      "E000637",
+      "E000639",
+      "E000640",
+      "E000641",
+      "E000642",
+      "E000643",
+      "E000644",
+      "E000645"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-20T08:58:31.580694Z",
+    "updated_at": "2026-08-20T08:58:31.580694Z",
+    "skill_id": "S000035",
+    "name": "Analyze Distributional Equity of Resource Consumption or Waste Burden Across Groups",
+    "canonical_name": "Distributional Equity and Unequal Exchange Analysis",
+    "description": "Examines whether the consumption, waste, or environmental burden of an economic phenomenon is distributed unevenly across country income groups or regions, and traces trade/value-chain flows to determine whether the higher-value stages of the associated value chain are systematically captured by a different group than the one bearing the burden.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "analyze_distributional_equity",
+    "industry_tags": [
+      "digital_economy",
+      "sustainability"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Is the consumption or waste burden of an economic phenomenon distributed unevenly across income groups or regions, and does the associated trade/value-chain structure result in one group capturing disproportionate value while another bears disproportionate cost?",
+    "required_inputs": [
+      "per-capita or per-unit consumption/waste/impact data disaggregated by country income group or region",
+      "trade or value-chain flow data for the underlying commodity or waste stream",
+      "data on regulatory/collection infrastructure coverage by group, if assessing management capacity"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Compute per-capita (or otherwise normalized) consumption, waste, or impact metrics for each country income group or region under study."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Calculate disparity ratios between the highest- and lowest-burden groups to quantify the scale of inequality."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Trace the trade or value-chain flows of the underlying commodity or waste stream to identify whether low-value stages concentrate in one group while high-value stages concentrate in another."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Assess regulatory or formal-system coverage gaps across groups to identify whether the burdened group also lacks the institutional capacity to manage the burden."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Synthesize findings into an assessment of whether an 'unequal exchange' pattern exists, where one group bears cost while another captures value."
+      }
+    ],
+    "expected_outputs": [
+      "per-capita disparity ratios across groups",
+      "a mapped trade/value-chain flow showing where value versus burden concentrates",
+      "an assessment of institutional/regulatory capacity gaps by group",
+      "an overall equity/unequal-exchange finding"
+    ],
+    "limitations": [
+      "Requires disaggregated data by income group or region, which may not be consistently available or comparable across sources.",
+      "Identifying a correlation between trade flow direction and burden/value distribution does not by itself establish causation; further qualitative investigation may be needed to confirm mechanisms."
+    ],
+    "source_report_ids": [
+      "R000009"
+    ],
+    "source_evidence_ids": [
+      "E000648",
+      "E000649",
+      "E000650",
+      "E000652",
+      "E000653",
+      "E000654",
+      "E000655",
+      "E000656"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-20T08:58:31.606858Z",
+    "updated_at": "2026-08-20T08:58:31.606858Z",
+    "skill_id": "S000036",
+    "name": "Assess Critical Input Supply Risk From Projected Demand Growth and Map Policy Responses",
+    "canonical_name": "Critical Input Demand-Growth and Policy Response Assessment",
+    "description": "Assesses supply concentration risk for a critical input by combining independent long-term demand-growth projections with a review of consuming-country industrial and trade policy responses, in order to surface emerging geopolitical and value-chain risks.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "assess_critical_input_supply_risk",
+    "industry_tags": [
+      "digital_economy",
+      "sustainability"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "When multiple independent projections point to sharp future growth in demand for a critical input, what supply concentration risks emerge, and how are consuming-country governments responding through industrial and trade policy?",
+    "required_inputs": [
+      "multiple independent long-term demand growth projections for the critical input, ideally from different research institutions",
+      "data on current geographic concentration of production/supply of the input",
+      "records of industrial or trade policy measures enacted by major consuming countries/blocs related to the input"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Compile multiple independent demand-growth projections for the critical input over a defined future horizon, noting the range of estimates across sources."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Map the current geographic concentration of production or processing capacity for the input to assess how much of future demand could be met by existing supply sources."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Survey policy measures introduced by major consuming countries or blocs to identify a shift toward securing supply."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Evaluate whether producing countries are positioned to capture higher-value stages of the associated value chain, or whether policy responses from consuming countries risk further confining producers to low-value raw extraction."
+      }
+    ],
+    "expected_outputs": [
+      "a synthesized range of demand-growth projections with source attribution",
+      "a supply concentration risk assessment",
+      "an inventory of policy responses by consuming country/bloc",
+      "an assessment of value-capture implications for producing countries"
+    ],
+    "limitations": [
+      "Relies on the availability and comparability of demand projections, which can vary widely in methodology and assumptions across sources.",
+      "Policy response mapping reflects a snapshot in time and may become outdated as governments adjust industrial policy."
+    ],
+    "source_report_ids": [
+      "R000009"
+    ],
+    "source_evidence_ids": [
+      "E000627",
+      "E000628",
+      "E000629",
+      "E000630",
+      "E000631",
+      "E000632",
+      "E000633",
+      "E000634"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T08:19:36.981885Z",
+    "updated_at": "2026-08-22T08:19:36.981885Z",
+    "skill_id": "S000037",
+    "name": "Identify Novel Risk Factors Introduced by a New Technology Relative to Established Risk Frameworks",
+    "canonical_name": "Technology Risk Gap Analysis",
+    "description": "A method for determining which risks posed by a new technology are not adequately addressed by risk management frameworks and controls that were designed for a prior, more established technology, by systematically comparing technical characteristics and assessing coverage gaps.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "identify_risk_gaps",
+    "industry_tags": [
+      "artificial_intelligence",
+      "risk_management"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "When adopting a new technology, which risk factors are not adequately addressed by existing risk management frameworks designed for prior technologies?",
+    "required_inputs": [
+      "a description of the new technology's technical characteristics (e.g., scale, data dependency, complexity, rate of change)",
+      "the scope and coverage of the existing risk framework used for the legacy technology domain"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Catalog the technical characteristics unique to the new technology that differ from the legacy technology it is typically compared against (e.g., scale of internal decision points, dependency on external data for training or reference, degree of internal opacity, frequency of drift or change over time)."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each identified characteristic, assess whether existing risk frameworks, standards, or controls already provide adequate coverage, partial coverage, or no coverage."
+      },
+      {
+        "step_order": 3,
+        "instruction": "For characteristics with partial or no coverage, articulate the specific new or increased risk this creates (e.g., inability to predict failure modes, difficulty in testing, inadequate documentation standards)."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Compile findings into a coverage matrix distinguishing 'covered', 'partially covered by adaptable frameworks', and 'uncovered - requires new guidance', to prioritize where new risk management approaches are needed."
+      }
+    ],
+    "expected_outputs": [
+      "a risk-coverage gap matrix comparing the new technology's characteristics against existing framework coverage",
+      "a prioritized list of uncovered risk areas requiring new mitigation approaches"
+    ],
+    "limitations": [
+      "Requires sufficiently detailed technical knowledge of the new technology to identify meaningful differences from legacy systems it is being compared against.",
+      "Does not itself quantify the probability or severity of the identified gaps; a separate risk assessment step is needed to prioritize remediation."
+    ],
+    "source_report_ids": [
+      "R000001"
+    ],
+    "source_evidence_ids": [
+      "E000658"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T08:19:37.008333Z",
+    "updated_at": "2026-08-22T08:19:37.008333Z",
+    "skill_id": "S000038",
+    "name": "Decompose Bias Risk Into Structural, Statistical, and Cognitive Sources",
+    "canonical_name": "Multi-Source Bias Decomposition",
+    "description": "A method for ensuring a comprehensive bias risk assessment by separately examining systemic/structural sources, computational/statistical sources, and human-cognitive sources of bias in a decision-making system, rather than treating bias as a single, data-only phenomenon.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "assess_bias_risk",
+    "industry_tags": [
+      "artificial_intelligence",
+      "risk_management"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "What are the distinct sources of bias affecting a decision-making system, and are all relevant categories of bias being considered rather than only the most visible one (e.g., data-level bias)?",
+    "required_inputs": [
+      "a description of the decision-making system or process under review, including its data sources, organizational context, and points of human judgment or interpretation"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Examine systemic-level sources of bias embedded in the datasets used, the organizational norms and practices across the system's lifecycle, and the broader societal context in which the system operates."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Examine computational and statistical sources of bias arising from non-representative sampling, algorithmic processing errors, or other systematic measurement errors."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Examine human-cognitive sources of bias arising from how individuals or groups perceive, interpret, or fill in missing information when making decisions based on the system's outputs."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Cross-check whether existing mitigation efforts address only one category (e.g., data rebalancing) while leaving the other categories unaddressed, and flag the resulting gaps."
+      }
+    ],
+    "expected_outputs": [
+      "a bias source inventory categorized by systemic, statistical, and cognitive origin",
+      "identification of mitigation gaps where only a subset of bias categories has been addressed"
+    ],
+    "limitations": [
+      "Categorization requires access to information about organizational processes and user/operator behavior, not just system data, which may not always be available.",
+      "Identifying bias sources does not by itself establish whether resulting outcomes are fair, since fairness involves broader normative judgments beyond bias mitigation."
+    ],
+    "source_report_ids": [
+      "R000001"
+    ],
+    "source_evidence_ids": [
+      "E000657"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T08:38:12.496968Z",
+    "updated_at": "2026-08-22T08:38:12.496968Z",
+    "skill_id": "S000039",
+    "name": "Evaluate Talent Pipeline Sustainability for a Specialized Workforce Domain",
+    "canonical_name": "Talent Pipeline Sustainability Assessment",
+    "description": "A method for determining whether the supply of specialized talent for a fast-growing technical domain will keep pace with projected demand, by comparing demand-growth projections against supply-side trends at multiple education/career stages and against the domain's dependence on external talent sources, then mapping identified gaps to a portfolio of intervention levers.",
+    "framework_ids": [],
+    "skill_category": "capability",
+    "applicable_scenario": "evaluate_talent_pipeline_sustainability",
+    "industry_tags": [
+      "artificial_intelligence",
+      "research_and_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Will the talent pipeline for a specialized, fast-growing technical field be sufficient to meet projected demand, and if not, where along the pipeline are the critical bottlenecks?",
+    "required_inputs": [
+      "projected demand growth rate for the specialized workforce over a multi-year horizon",
+      "enrollment or graduation trend data broken out by education/career stage (e.g., undergraduate vs. advanced/doctoral)",
+      "estimate of the proportion of the current workforce dependent on external (e.g., foreign-born, cross-border) talent",
+      "inventory of existing programs or policies already targeting talent development in the domain"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Quantify the projected demand growth for the specialized workforce and, where possible, the economic value at stake, to establish the scale of the sustainability question."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Assess supply-side trends separately at each education or career stage to identify where enrollment or output is growing versus stagnating or declining."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Determine the domain's degree of dependence on external or non-domestic talent sources to assess vulnerability to disruption in that supply channel."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Cross-reference the demand growth, stage-level supply trends, and external-dependency finding to identify the specific pipeline stage(s) representing the greatest bottleneck."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Map each identified bottleneck to a corresponding intervention lever (e.g., early-stage education, retraining/upskilling, targeted talent attraction, regional capacity building, retention) rather than relying on a single uniform response."
+      }
+    ],
+    "expected_outputs": [
+      "a stage-by-stage diagnosis of where the talent pipeline is under strain",
+      "an assessment of dependency risk on external talent sources",
+      "a prioritized set of intervention levers matched to the specific bottlenecks identified"
+    ],
+    "limitations": [
+      "Requires enrollment, workforce, and demand-projection data disaggregated by education/career stage, which may not be available or reliable for less-tracked domains.",
+      "Does not by itself determine the funding level or timeline required to close an identified gap â that requires a separate resourcing analysis."
+    ],
+    "source_report_ids": [
+      "R000002"
+    ],
+    "source_evidence_ids": [
+      "E000676",
+      "E000677",
+      "E000678",
+      "E000679",
+      "E000680",
+      "E000681",
+      "E000682",
+      "E000683"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T08:38:12.522535Z",
+    "updated_at": "2026-08-22T08:38:12.522535Z",
+    "skill_id": "S000040",
+    "name": "Translate Governance Principles into Concrete R&D Priorities",
+    "canonical_name": "Principle-to-Research-Agenda Translation",
+    "description": "A method for converting high-level ethical, legal, or governance principles that already exist for a domain into an actionable research and development agenda, by identifying which principles currently lack reliable technical means of measurement, verification, or implementation.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "identify_rd_priorities_from_governance_gaps",
+    "industry_tags": [
+      "artificial_intelligence",
+      "research_and_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Given a set of existing high-level governance or ethical principles for a domain, which of them currently lack the technical means to be reliably implemented in practice, and what research priorities does that gap imply?",
+    "required_inputs": [
+      "a defined set of existing governance, ethical, or regulatory principles/protections relevant to the domain",
+      "an inventory of current technical capabilities and known limitations relative to those principles",
+      "evidence of emerging concern or activity (e.g., publication trends, recent recommendations) signaling where gaps are most acute"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Identify the existing governance, ethical, or regulatory frameworks that already articulate the desired principles or protections for the domain."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each principle, assess whether reliable technical methods currently exist to measure, verify, or ensure that the principle is being met in practice."
+      },
+      {
+        "step_order": 3,
+        "instruction": "For each principle lacking adequate technical implementation methods, define this gap as a distinct line of research effort (e.g., new metrics, new mitigation techniques, new evaluation methodologies)."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Group the resulting research needs into a small number of coherent lines of effort to structure a prioritized research agenda."
+      }
+    ],
+    "expected_outputs": [
+      "a mapping of governance principles to identified technical implementation gaps",
+      "a structured set of prioritized R&D lines of effort addressing those gaps"
+    ],
+    "limitations": [
+      "Assumes the existing governance frameworks are reasonably well-specified; if the principles themselves are vague, the gap analysis will be unreliable.",
+      "Closing a technical gap does not guarantee the underlying principle is satisfied in practice â a separate downstream evaluation is needed to confirm real-world compliance."
+    ],
+    "source_report_ids": [
+      "R000002"
+    ],
+    "source_evidence_ids": [
+      "E000663",
+      "E000664",
+      "E000665",
+      "E000669"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T08:38:12.546430Z",
+    "updated_at": "2026-08-22T08:38:12.546430Z",
+    "skill_id": "S000041",
+    "name": "Assess Shared Infrastructure Needs for an Emerging Research Field",
+    "canonical_name": "Shared R&D Infrastructure Needs Assessment",
+    "description": "A structured checklist method for identifying where investment in shared, broadly-accessible infrastructure is needed to enable equitable participation in advancing a fast-moving research field, by separately evaluating data resources, computational resources, testing/validation resources, and standards/benchmarks.",
+    "framework_ids": [],
+    "skill_category": "capability",
+    "applicable_scenario": "assess_shared_infrastructure_needs",
+    "industry_tags": [
+      "artificial_intelligence",
+      "research_and_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "What shared infrastructure investments are needed to enable broad, equitable participation in advancing a specific research field, rather than leaving access concentrated among a few well-resourced actors?",
+    "required_inputs": [
+      "inventory of existing data resources and their accessibility/quality/representativeness gaps",
+      "assessment of computational resource availability and its concentration among well-resourced institutions versus the broader research community",
+      "inventory of existing independent testing or validation resources for evaluating claims made about the technology",
+      "assessment of the maturity of existing technical standards and benchmarks used to measure and compare performance or trustworthiness"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Inventory existing data resources relevant to the field and identify gaps in accessibility, quality, documentation, or representativeness that limit their research use."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Assess computational resource availability and identify whether access is concentrated among a small set of well-resourced institutions versus broadly distributed across the research community."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Evaluate whether independent testing or validation resources exist to verify claims made about the technology, distinct from testing conducted internally by developers."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Evaluate the maturity of existing technical standards and benchmarks used to measure and compare system performance, trustworthiness, or safety."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Synthesize the findings across these categories into a prioritized set of shared-infrastructure investment recommendations, favoring categories with the largest access gaps."
+      }
+    ],
+    "expected_outputs": [
+      "a categorized gap assessment across data, compute, testing, and standards/benchmarks infrastructure",
+      "a prioritized list of shared-infrastructure investment recommendations"
+    ],
+    "limitations": [
+      "Assumes infrastructure gaps can be meaningfully separated into these categories; in some fields the categories may overlap or interact in ways this checklist does not capture.",
+      "Does not itself estimate the cost or timeline of closing identified infrastructure gaps."
+    ],
+    "source_report_ids": [
+      "R000002"
+    ],
+    "source_evidence_ids": [
+      "E000666",
+      "E000667",
+      "E000668",
+      "E000670",
+      "E000671",
+      "E000672",
+      "E000673",
+      "E000674",
+      "E000675"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T10:29:48.020156Z",
+    "updated_at": "2026-08-22T10:29:48.020156Z",
+    "skill_id": "S000042",
+    "name": "Assess Organizational Evidence-Building Capacity via Two-Phase Survey",
+    "canonical_name": "Organizational Capacity Assessment (Two-Phase Validated Survey)",
+    "description": "A method for systematically assessing an organization's internal capacity to produce and use evidence (research, evaluation, statistical analysis) for decision-making, by first surveying front-line practitioners on existing activities and then validating those findings with senior leadership on how evidence actually informs policy decisions.",
+    "framework_ids": [],
+    "skill_category": "capability",
+    "applicable_scenario": "evaluate_internal_capabilities",
+    "industry_tags": [
+      "aerospace",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "How can an organization systematically assess its own capacity to generate and use evidence to inform decision-making across many dispersed units, while controlling for self-report bias?",
+    "required_inputs": [
+      "a defined set of capacity criteria (e.g., coverage, quality, methodology, effectiveness, independence)",
+      "a list of representative stakeholders across organizational units who conduct or oversee evaluation/research/statistical activities",
+      "organizational authority to distribute and collect a structured survey"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Identify representatives across all major organizational units, including cross-cutting functional groups, who conduct or are aware of evaluation, research, or statistical analysis activities, so no domain is systematically excluded."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Design a structured survey organized into a small number of thematic sections mapped to defined capacity criteria, using a standardized rating scale to allow cross-unit comparison."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Distribute the survey first to front-line practitioners to establish a self-reported baseline of existing evidence-building activities and their perceived quality."
+      },
+      {
+        "step_order": 4,
+        "instruction": "In a second phase, survey senior leadership of the same units on how evidence-based analysis actually informs their policy and decision-making, to validate and offset the self-report bias inherent in the first phase."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Compare responses across the two phases to identify commonalities and discrepancies, then use the validated findings to characterize overall capacity and pinpoint gaps."
+      }
+    ],
+    "expected_outputs": [
+      "a capacity rating profile across defined criteria",
+      "identification of units or activities with weak or unvalidated evidence-building capacity",
+      "a validated baseline of how evidence currently informs organizational decision-making"
+    ],
+    "limitations": [
+      "Self-reported survey data can carry optimism or social-desirability bias even after leadership validation.",
+      "Cascading or forwarded survey distribution makes the true response rate hard to quantify, limiting precision.",
+      "The method assesses perceived capacity and usage, not the actual methodological rigor or validity of the underlying analyses."
+    ],
+    "source_report_ids": [
+      "R000003"
+    ],
+    "source_evidence_ids": [
+      "E000722",
+      "E000723",
+      "E000724",
+      "E000725",
+      "E000726",
+      "E000727"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T10:29:48.052889Z",
+    "updated_at": "2026-08-22T10:29:48.052889Z",
+    "skill_id": "S000043",
+    "name": "Map Organizational Unit Contributions Across Strategic Goals",
+    "canonical_name": "Capability-to-Strategic-Goal Mapping",
+    "description": "A method for systematically documenting how each operating unit within an organization contributes distinct capabilities, infrastructure, or programs toward each of the organization's parallel strategic goals, revealing where units provide cross-cutting or unique support versus where goals have thin capability coverage.",
+    "framework_ids": [],
+    "skill_category": "capability",
+    "applicable_scenario": "evaluate_internal_capabilities",
+    "industry_tags": [
+      "aerospace",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Across an organization with multiple operating units and multiple parallel strategic goals, which units contribute meaningful, non-duplicative capability toward each goal, and are any goals thinly supported?",
+    "required_inputs": [
+      "a list of the organization's defined strategic goals or priority themes",
+      "a list of operating units, sites, or divisions",
+      "descriptions of each unit's programs, infrastructure, and areas of expertise"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Build a matrix with each strategic goal as a column and each operating unit as a row."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each unit, identify concrete programs, facilities, or expertise that materially advance each specific goal, rather than a generic statement of alignment."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Flag contributions that are unique or non-substitutable (e.g., a specialized facility or capability no other unit possesses) versus those that duplicate capability found elsewhere in the organization."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Aggregate across units per goal to identify goals supported by a broad capability base versus goals with concentrated or missing unit-level support."
+      }
+    ],
+    "expected_outputs": [
+      "a capability matrix mapping units to strategic goals",
+      "a list of goals with concentrated capability risk or coverage gaps",
+      "a list of unique, non-substitutable unit-level capabilities"
+    ],
+    "limitations": [
+      "Relies on each unit's own description of its contributions, which may overstate relevance to a goal in order to appear strategically aligned.",
+      "Does not quantify the magnitude, cost, or effectiveness of each unit's contribution, only whether a contribution exists."
+    ],
+    "source_report_ids": [
+      "R000003"
+    ],
+    "source_evidence_ids": [
+      "E000706",
+      "E000707",
+      "E000708"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T10:29:48.077868Z",
+    "updated_at": "2026-08-22T10:29:48.077868Z",
+    "skill_id": "S000044",
+    "name": "Phased Probabilistic Cost and Schedule Risk Management for Complex Projects",
+    "canonical_name": "Probabilistic Cost-Schedule Estimating and Tracking Framework",
+    "description": "A structured approach to managing cost and schedule risk on long-duration, technically complex projects by requiring probabilistic (range-based) estimates at defined lifecycle gates, independently cross-checking them with parametric models built from historical data, and tracking actual performance against the approved baseline during execution.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "assess_project_risk",
+    "industry_tags": [
+      "aerospace",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "How can an organization manage cost and schedule risk on long-duration, technically complex projects across formulation, approval, and execution phases?",
+    "required_inputs": [
+      "historical cost and schedule data from comparable past projects",
+      "a defined project lifecycle with formulation, approval, and implementation phases",
+      "technical parameters describing project scope, complexity, and approach"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "During early project formulation, require a probabilistic (range-based, not single-point) cost and schedule estimate that explicitly incorporates uncertainty in scope, technical approach, and implementation strategy."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Before approving the project for implementation, require a probabilistic baseline model of the full plan to serve as the formal commitment basis."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Commission an independent assessment of the probabilistic estimate using separately developed parametric models built from historical cost/schedule relationships (estimating relationships derived via regression or similar statistical techniques) as a cross-check against the project team's own estimate."
+      },
+      {
+        "step_order": 4,
+        "instruction": "During implementation, track actual performance against the approved baseline using an earned-value-type method, and periodically update the parametric models with new project data on a defined cadence."
+      }
+    ],
+    "expected_outputs": [
+      "a probabilistic cost and schedule range at each lifecycle gate",
+      "an independent cross-check estimate that challenges the project team's own assumptions",
+      "a running earned-value performance comparison against baseline throughout implementation"
+    ],
+    "limitations": [
+      "Parametric models built on historical data perform poorly when a project has major cost drivers not represented in past programs, or when the technical approach is not yet well defined.",
+      "This method reduces but does not eliminate estimation risk, since probabilistic ranges are only as good as the relevance and quality of the historical data used to build them."
+    ],
+    "source_report_ids": [
+      "R000003"
+    ],
+    "source_evidence_ids": [
+      "E000709",
+      "E000710",
+      "E000711",
+      "E000712",
+      "E000713",
+      "E000714",
+      "E000715",
+      "E000716",
+      "E000717"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T12:44:28.443728Z",
+    "updated_at": "2026-08-22T12:44:28.443728Z",
+    "skill_id": "S000045",
+    "name": "Screen a Large Candidate Set Down to a Priority Subset Using Weighted Demand-Side Scoring",
+    "canonical_name": "Candidate Screening Funnel",
+    "description": "A method for reducing an unmanageably large set of candidate items (materials, technologies, suppliers, etc.) to a smaller, prioritized subset that merits deeper risk or opportunity analysis. It works by mapping each candidate to the specific applications/use-cases that consume it, scoring the growth trajectory of those applications against a benchmark growth rate, scoring how central the candidate is within each application (its adoption or usage share), and combining these into a weighted score used to split the full list into a 'priority' group and a 'lower-priority / watch list' group.",
+    "framework_ids": [],
+    "skill_category": "market",
+    "applicable_scenario": "screen_candidate_portfolio",
+    "industry_tags": [
+      "energy",
+      "critical_materials"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Given a very large number of candidate items that could each be evaluated, which ones actually warrant deeper, resource-intensive analysis based on how important they are to growing, high-demand use cases?",
+    "required_inputs": [
+      "a taxonomy mapping each candidate item to the specific application(s)/technology(ies) that use it",
+      "growth rate (e.g., CAGR) projections for each application/use case",
+      "adoption or usage share of the candidate item within each application",
+      "a benchmark growth rate (e.g., overall economic growth) to judge whether an application's growth is above- or below-average"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Build a taxonomy linking every candidate item to the specific applications, sub-technologies, or components in which it is used, drawing on domain expert consultation and existing sector reports."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each application that uses a candidate item, score the application's projected growth rate relative to a benchmark growth rate (e.g., broader economic growth), to flag applications with above-average demand momentum."
+      },
+      {
+        "step_order": 3,
+        "instruction": "For each application, score the adoption or market-share level of the specific sub-technology/component that relies on the candidate item, to capture how central the item is within that application rather than treating all uses as equally important."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Combine the application-growth score and the sub-technology-adoption score using a defined weighting scheme (weighting the more discriminating metric more heavily) to produce a composite screening score for each candidate."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Set a score threshold to split the full candidate list into a 'priority' set requiring detailed follow-on analysis and a 'lower-priority/watch list' set that is deprioritized but retained for future re-screening."
+      }
+    ],
+    "expected_outputs": [
+      "a scored and ranked list of all candidate items",
+      "a bifurcated output: a smaller 'priority' subset selected for deep-dive analysis, and a 'watch list' subset that is lower priority for now"
+    ],
+    "limitations": [
+      "Requires reasonably granular growth and adoption-share data for each application that uses each candidate item, which may not exist for niche or emerging use cases.",
+      "The choice of scoring thresholds and weights is a judgment call that materially affects which items pass the screen, and should be documented and revisited as data quality improves.",
+      "This method only screens on demand-side/importance signals; it does not by itself assess supply-side risk, which requires a separate analysis."
+    ],
+    "source_report_ids": [
+      "R000005"
+    ],
+    "source_evidence_ids": [
+      "E000954",
+      "E000955",
+      "E000897",
+      "E000962",
+      "E000963",
+      "E000956",
+      "E000957",
+      "E000965"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T12:44:28.488422Z",
+    "updated_at": "2026-08-22T12:44:28.488422Z",
+    "skill_id": "S000046",
+    "name": "Classify Portfolio Items on a Two-Dimensional Importance-vs-Supply-Risk Matrix",
+    "canonical_name": "Importance–Supply Risk Criticality Matrix",
+    "description": "A structured method for scoring a portfolio of many items along two independent dimensions — their importance/value to a strategic objective, and the risk that their supply will be disrupted or insufficient — using multiple weighted sub-factors on each dimension, in order to classify items into discrete priority tiers (e.g., critical, near-critical, non-critical) and track how those classifications shift over different time horizons or as underlying conditions change.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "classify_items_by_criticality",
+    "industry_tags": [
+      "energy",
+      "critical_materials"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Across a portfolio of many items that each matter to a strategic objective, which specific items combine high importance with high supply risk and therefore deserve the most urgent attention, and how does that prioritization change over different time horizons?",
+    "required_inputs": [
+      "for each item: demand growth/usage-share data supporting an importance score",
+      "for each item: data on the availability of substitutes or alternative technologies",
+      "for each item: current production/capacity figures and multiple future demand scenarios (combining different adoption-rate and usage-intensity assumptions) to assess a supply-demand gap",
+      "for each item: producer or supplier market-share data by country/firm to assess concentration risk",
+      "for each item: political, regulatory, or social risk indicators for the leading supplying regions/firms",
+      "for each item: whether it is produced as a primary product or as a co-/by-product of another item's production"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Score each item's importance using weighted sub-factors such as the growth of the applications that depend on it and its adoption share within those applications."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Score each item's substitutability — the extent to which alternative materials, components, or system-level technologies could reduce reliance on it without unacceptable performance loss."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Build multiple future demand trajectories for each item by combining low/high deployment scenarios with low/high usage-intensity assumptions, and compare each trajectory against current production capacity to score basic availability risk."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Score supplier/producer concentration risk for each item using a market-concentration index, and score the political/regulatory/social risk of the leading supplying regions or firms, weighted by their production share."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Score each item's dependency on other markets — i.e., whether it is a primary product or a co-/by-product whose output is constrained by demand for a different, unrelated product."
+      },
+      {
+        "step_order": 6,
+        "instruction": "Combine the sub-factor scores into an overall importance score and an overall supply-risk score using a defined weighting scheme, and plot each item on an importance-by-risk matrix to assign it to a discrete tier."
+      },
+      {
+        "step_order": 7,
+        "instruction": "Repeat the scoring for at least two time horizons (e.g., near-term and longer-term) and compare tier assignments across horizons and against any prior assessment to identify items whose priority status is rising, falling, or newly emerging."
+      }
+    ],
+    "expected_outputs": [
+      "an importance-vs-supply-risk matrix with each portfolio item assigned to a tier (e.g., critical / near-critical / non-critical)",
+      "a ranked list of the highest-priority items requiring the most urgent attention",
+      "a comparison across time horizons or against a prior assessment showing which items have moved between tiers and why"
+    ],
+    "limitations": [
+      "Requires substantial multi-source data across many sub-factors for every item in the portfolio, which may be unavailable or of inconsistent quality, especially for smaller or opaque markets.",
+      "The relative weights assigned to each sub-factor are analytical judgments that materially change the resulting classification and should be made explicit and revisited periodically.",
+      "The matrix captures structural, medium-term risk conditions but does not capture short-term price volatility or discrete disruptive events."
+    ],
+    "source_report_ids": [
+      "R000005"
+    ],
+    "source_evidence_ids": [
+      "E000969",
+      "E000970",
+      "E000971",
+      "E000972",
+      "E000973",
+      "E000974",
+      "E000975",
+      "E000976",
+      "E000977",
+      "E000978",
+      "E000979",
+      "E000980",
+      "E000981",
+      "E000982",
+      "E000983",
+      "E000984"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-22T12:44:28.508911Z",
+    "updated_at": "2026-08-22T12:44:28.508911Z",
+    "skill_id": "S000047",
+    "name": "Assess Supply/Market Concentration Risk Using the Herfindahl-Hirschman Index",
+    "canonical_name": "Market Concentration Risk Assessment (HHI)",
+    "description": "A method for quantifying how concentrated a market or supply base is among a small number of participants (countries, firms, or regions), using the Herfindahl-Hirschman Index (sum of squared market shares), and classifying the result against defined thresholds to flag markets where a small number of participants could exert outsized market power or create single-point-of-failure supply risk.",
+    "framework_ids": [],
+    "skill_category": "competition",
+    "applicable_scenario": "assess_market_concentration_risk",
+    "industry_tags": [
+      "energy",
+      "critical_materials"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Is a given market or supply chain concentrated enough among a small number of participants that those participants could exert market power or create a disproportionate risk of supply disruption?",
+    "required_inputs": [
+      "market share (%) of each significant participant (country, company, or region) in the market or supply stage being assessed",
+      "a set of concentration thresholds against which to classify the computed index (e.g., regulatory precedents or comparable-market benchmarks)"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Collect market share percentages for all significant participants at the relevant stage of the market or supply chain (e.g., mining, refining, or manufacturing)."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Calculate the Herfindahl-Hirschman Index by squaring each participant's market share and summing the results (scaled to a 0–10,000 index)."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Classify the computed HHI against defined concentration thresholds (e.g., low, moderate, high, very high concentration) to produce a concentration risk score."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Interpret the concentration score in context — for example, by cross-checking whether the dominant participant(s) also carry elevated political, regulatory, or social risk — to judge whether the numeric concentration translates into a genuine strategic risk rather than a benign monopoly by a stable, low-risk supplier."
+      }
+    ],
+    "expected_outputs": [
+      "a calculated HHI score for the market or supply stage in question",
+      "a categorical concentration risk rating",
+      "a ranked comparison of concentration risk across multiple markets, items, or supply-chain stages"
+    ],
+    "limitations": [
+      "The HHI alone measures statistical concentration and does not indicate whether the concentrated participants are geopolitically aligned, hostile, or otherwise likely to act against buyers' interests.",
+      "It is a static snapshot based on current market shares and does not predict future new entrants, capacity expansions, or shifts in production location.",
+      "Requires reasonably reliable and comparable market-share data across all participants, which may be unavailable in less-transparent markets."
+    ],
+    "source_report_ids": [
+      "R000005"
+    ],
+    "source_evidence_ids": [
+      "E000966",
+      "E000967",
+      "E000968",
+      "E001048",
+      "E001069",
+      "E001103"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:05:31.571751Z",
+    "updated_at": "2026-08-24T06:05:31.571751Z",
+    "skill_id": "S000048",
+    "name": "Evaluate Regulatory Governance Model for an Emerging Technology",
+    "canonical_name": "Emerging Technology Governance Model Assessment",
+    "description": "Assesses whether the risks and complexities introduced by an emerging general-purpose technology are adequately addressed by existing sector-specific regulatory bodies, or whether new cross-cutting rules, coordination mechanisms, or regulatory capacity are needed.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "evaluate_regulatory_governance_model",
+    "industry_tags": [
+      "artificial_intelligence",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Should oversight of an emerging cross-cutting technology rely on existing sector-specific regulators, or does it require new cross-cutting rules and coordination mechanisms?",
+    "required_inputs": [
+      "an inventory of existing regulators/legislation that currently cover aspects of the technology's use",
+      "evidence of risk types associated with the technology (e.g. bias, safety, liability) and whether they are sector-specific or cross-cutting",
+      "evidence of regulatory coordination challenges (overlap, gaps, inconsistency) reported by regulators or industry"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Catalog which existing sector-specific and cross-sector regulators and legislation already cover the risks and use cases created by the technology."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Classify the technology's risk types as either genuinely sector-specific (best handled by existing bodies) or cross-cutting (spanning multiple sectors with no single natural regulatory owner)."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Gather evidence of coordination problems between regulators — such as overlapping mandates, inconsistent requirements, or capability gaps — that indicate whether the status quo is straining."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Define a small set of alternative governance options (e.g., retain status quo, remove specific burdens, add supplementary cross-cutting principles) and evaluate each against criteria such as innovation impact, consistency of treatment, and protection of public/individual rights."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Select or recommend a governance model based on which option best balances the identified risk coverage gaps against the costs of new cross-cutting intervention."
+      }
+    ],
+    "expected_outputs": [
+      "a classification of the technology's risks into sector-specific vs cross-cutting",
+      "an assessment of whether current regulatory coordination is adequate",
+      "a ranked comparison of governance model options with a recommended approach"
+    ],
+    "limitations": [
+      "Requires reasonably mature regulatory mapping data; in jurisdictions with less-developed regulatory transparency this method may be harder to execute.",
+      "Does not itself design the detailed rules or standards — it only determines the appropriate governance architecture, which must be followed by separate detailed rule-making."
+    ],
+    "source_report_ids": [
+      "R000006"
+    ],
+    "source_evidence_ids": [
+      "E001465",
+      "E001471",
+      "E001473",
+      "E001474",
+      "E001475"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:05:31.594664Z",
+    "updated_at": "2026-08-24T06:05:31.594664Z",
+    "skill_id": "S000049",
+    "name": "Assess Ecosystem-Level Capability Gaps to Prioritize Foundational Investment",
+    "canonical_name": "Ecosystem Capability Gap Assessment",
+    "description": "Maps the foundational inputs required for a technology or sector ecosystem to thrive (e.g. talent, data, infrastructure, financing, market access), measures the current severity of gaps in each input using available quantitative and survey evidence, benchmarks against peer countries/organizations, and uses this to prioritize where long-term investment should be directed.",
+    "framework_ids": [],
+    "skill_category": "capability",
+    "applicable_scenario": "identify_capability_gaps",
+    "industry_tags": [
+      "artificial_intelligence",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Across the foundational inputs an ecosystem needs to grow (talent, data, infrastructure, financing, market access), where are the most severe gaps, and how does the current position compare with peers, in order to prioritize investment?",
+    "required_inputs": [
+      "a defined list of foundational input categories relevant to the ecosystem (e.g. talent, data, compute/infrastructure, finance, trade access)",
+      "quantitative indicators for each input (e.g. vacancy growth, unfilled vacancy rates, investment volumes, output rankings)",
+      "survey or qualitative evidence of practitioner-perceived barriers for each input",
+      "comparable benchmark data for peer countries/organizations"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Define the set of foundational inputs the ecosystem depends on and, for each, identify at least one quantitative indicator and one perception-based (survey) indicator of gap severity."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Score or rank each input by combining the quantitative trend (e.g., growing demand vs. static supply) with the survey-reported severity of barriers."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Benchmark the ecosystem's position on each input against comparable peer entities to distinguish inputs where the entity already leads from those where it lags."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Cross-reference gap severity with existing intervention efforts to identify which inputs are under-addressed relative to their severity."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Prioritize future investment toward the inputs with the combination of high gap severity, competitive disadvantage versus peers, and insufficient existing intervention."
+      }
+    ],
+    "expected_outputs": [
+      "a ranked list of foundational inputs by gap severity",
+      "a peer-benchmarked position for each input",
+      "a prioritized investment agenda across the foundational inputs"
+    ],
+    "limitations": [
+      "Depends on the availability of comparable quantitative and survey data across inputs and peer entities, which may not exist for less-studied ecosystems.",
+      "Severity scoring based on combining quantitative and survey data involves subjective weighting choices that can shift the resulting priority order."
+    ],
+    "source_report_ids": [
+      "R000006"
+    ],
+    "source_evidence_ids": [
+      "E001379",
+      "E001380",
+      "E001400",
+      "E001401",
+      "E001402",
+      "E001404",
+      "E001405",
+      "E001406",
+      "E001409",
+      "E001416",
+      "E001428",
+      "E001429",
+      "E001367"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:05:31.610721Z",
+    "updated_at": "2026-08-24T06:05:31.610721Z",
+    "skill_id": "S000050",
+    "name": "Segment Technology Adoption Readiness to Target Diffusion Efforts",
+    "canonical_name": "Technology Adoption Readiness Segmentation",
+    "description": "Classifies the population of potential adopters of a technology into adoption-stage segments (e.g., already implemented, planning/piloting, not adopting), cross-references this against organizational characteristics such as size or sector, and uses the pattern to target diffusion-support programs at segments with high potential but low current maturity.",
+    "framework_ids": [],
+    "skill_category": "growth",
+    "applicable_scenario": "segment_target_users",
+    "industry_tags": [
+      "artificial_intelligence",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Which segments of potential adopters are lagging in technology adoption despite high potential, and where should diffusion-support efforts be concentrated?",
+    "required_inputs": [
+      "survey data classifying respondents into adoption stages (adopted / planning-or-piloting / not adopting)",
+      "organizational characteristics for each respondent (e.g. size, sector, region)",
+      "an independent assessment of which segments represent high commercial or strategic potential"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Classify the surveyed population into discrete adoption-stage categories based on their current use of the technology."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Cross-tabulate adoption stage against organizational characteristics (e.g. size, sector) to identify which characteristics correlate most strongly with low adoption."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Overlay an independent judgment of which low-adoption segments nonetheless represent high potential value or strategic importance."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Design or recommend targeted diffusion-support interventions (e.g. matchmaking programs, tailored financing, engagement pathways) specifically for the high-potential, low-maturity segments identified."
+      }
+    ],
+    "expected_outputs": [
+      "a segmentation of the adopter population by adoption stage and characteristic",
+      "a shortlist of high-potential, low-adoption segments",
+      "targeted intervention recommendations for those segments"
+    ],
+    "limitations": [
+      "Relies on adoption data being self-reported via survey, which may be subject to sampling bias or self-selection.",
+      "Does not itself explain the causal reasons for low adoption in a given segment — a separate root-cause investigation is needed before designing interventions."
+    ],
+    "source_report_ids": [
+      "R000006"
+    ],
+    "source_evidence_ids": [
+      "E001439",
+      "E001440",
+      "E001441",
+      "E001442"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:55:43.372365Z",
+    "updated_at": "2026-08-24T06:55:43.372365Z",
+    "skill_id": "S000051",
+    "name": "Benchmark Sector Competitive Position Using Cross-Peer Indicators",
+    "canonical_name": "Comparative Sector Benchmarking",
+    "description": "A method for establishing where an economic sector, region, or entity currently stands relative to a defined set of peers, by comparing it across a consistent basket of scale, growth, and dynamism indicators rather than relying on a single metric.",
+    "framework_ids": [],
+    "skill_category": "market",
+    "applicable_scenario": "evaluate_market_attractiveness",
+    "industry_tags": [
+      "digital_economy",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Relative to a defined set of peers, is the target sector/entity leading, average, or lagging, and on which specific dimensions?",
+    "required_inputs": [
+      "a defined set of comparator peers (e.g. countries, regions, or competing entities)",
+      "a consistent basket of indicators covering absolute scale, growth rate, and dynamism (e.g. investment inflows, count of high-growth firms) measured over the same time window for the target and all peers"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Select a comparator peer set that is structurally comparable to the target entity (similar economic bloc, development level, or market type)."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Assemble the same indicators for the target and every peer over the same historical period, covering both absolute scale (e.g. market size, jobs) and growth dynamism (e.g. growth rate, count of high-growth companies, capital inflows)."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Rank the target against peers on each indicator separately, distinguishing indicators where the target leads in absolute scale from indicators where it leads only in growth rate or momentum."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Synthesize the indicator-level rankings into an overall competitive position statement, explicitly noting which dimensions are genuine strengths versus areas of relative parity or weakness."
+      }
+    ],
+    "expected_outputs": [
+      "a peer comparison table ranking the target against each comparator on every indicator",
+      "a short list of indicators where the target holds clear leadership versus indicators of relative weakness",
+      "an overall competitive position statement distinguishing absolute-scale leadership from growth-rate leadership"
+    ],
+    "limitations": [
+      "Requires consistently defined and measured indicators across all peers, which may not be available for less-tracked sectors or opaque markets.",
+      "Reflects past and current performance only; it does not by itself explain the causes of the position or predict future trajectory."
+    ],
+    "source_report_ids": [
+      "R000007"
+    ],
+    "source_evidence_ids": [
+      "E001513",
+      "E001514",
+      "E001515",
+      "E001516",
+      "E001517",
+      "E001520",
+      "E001521",
+      "E001522",
+      "E001523",
+      "E001524",
+      "E001596",
+      "E001606"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:55:43.397522Z",
+    "updated_at": "2026-08-24T06:55:43.397522Z",
+    "skill_id": "S000052",
+    "name": "Assess Capital Market Gaps Across Company Growth Stages",
+    "canonical_name": "Stage-Based Financing Gap Analysis",
+    "description": "A method for diagnosing whether a domestic capital market provides adequate funding at every stage of a company's growth (from early-stage to public listing), by segmenting financing data by stage and by the geographic/institutional origin of capital, then flagging stages showing structural dependence on external or underused sources.",
+    "framework_ids": [],
+    "skill_category": "finance",
+    "applicable_scenario": "evaluate_internal_capabilities",
+    "industry_tags": [
+      "digital_economy",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "At which stage of the company growth lifecycle does the domestic financing ecosystem show a structural capital gap, and which investor categories are underrepresented at that stage?",
+    "required_inputs": [
+      "funding round data segmented by company growth stage (e.g. seed, early venture, later/scale-up rounds, public listing)",
+      "breakdown of capital source by domestic versus foreign investors at each stage",
+      "asset allocation data for major institutional investor categories (e.g. pension funds) relative to their total assets under management"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Segment the financing ecosystem into discrete stages of company growth, from earliest funding through to public listing."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each stage, calculate the share of capital originating from domestic sources versus foreign sources."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Examine major domestic institutional investor categories and compare their allocation to the relevant asset class against their total available assets, to detect systematic underinvestment."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Flag the specific stage(s) where domestic capital participation is disproportionately low relative to other stages, and treat these as priority points for structural or regulatory intervention."
+      }
+    ],
+    "expected_outputs": [
+      "a stage-by-stage map of capital sourcing (domestic vs. foreign share) across the company growth lifecycle",
+      "identification of the specific growth stage(s) exhibiting a capital gap",
+      "a list of institutional investor categories that are structurally underrepresented at the gap stage"
+    ],
+    "limitations": [
+      "Requires granular, investor-origin-tagged funding data by round, which may not be publicly disclosed in all markets.",
+      "A observed gap is correlational; it does not on its own prove that regulation, rather than investor preference or risk appetite, is the binding constraint."
+    ],
+    "source_report_ids": [
+      "R000007"
+    ],
+    "source_evidence_ids": [
+      "E001601",
+      "E001602",
+      "E001522",
+      "E001606",
+      "E001607",
+      "E001608",
+      "E001609",
+      "E001610",
+      "E001611",
+      "E001612"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T06:55:43.421110Z",
+    "updated_at": "2026-08-24T06:55:43.421110Z",
+    "skill_id": "S000053",
+    "name": "Build a Multi-Pillar Growth Roadmap for a Target Economy or Sector",
+    "canonical_name": "Multi-Pillar Growth Strategy Construction",
+    "description": "A method for constructing a growth strategy for an economic sector, region, or ecosystem by decomposing growth into a set of complementary structural pillars (e.g. infrastructure, innovation/IP, talent, capital access, geographic/sectoral diffusion, international market access), diagnosing gaps within each, and consolidating pillar-level interventions into a single trackable action roadmap.",
+    "framework_ids": [],
+    "skill_category": "strategy_generation",
+    "applicable_scenario": "identify_growth_drivers",
+    "industry_tags": [
+      "digital_economy",
+      "public_sector"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "What complementary structural pillars must be developed in parallel to sustain growth of a target economy or sector, and what specific, ownable actions close the gaps within each pillar?",
+    "required_inputs": [
+      "baseline benchmarking data establishing the current position and growth momentum of the target economy/sector",
+      "a working definition of the structural pillars considered necessary for sustained growth (e.g. infrastructure, innovation capacity, human capital, capital access, geographic/sectoral equity, international market access)",
+      "evidence of specific gaps or bottlenecks within each pillar"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Establish the current position and growth momentum of the target economy/sector using baseline quantitative indicators."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Define the set of complementary structural pillars required to sustain growth, ensuring the set covers foundational capacity, innovation, talent, capital, equitable diffusion, and external market access rather than a single lever."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Within each pillar, identify specific, evidenced gaps or bottlenecks that currently constrain growth."
+      },
+      {
+        "step_order": 4,
+        "instruction": "For each identified gap, define a specific intervention with an accountable owner and a target timeline."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Consolidate all pillar-level interventions into a single roadmap document to enable cross-pillar tracking and execution monitoring."
+      }
+    ],
+    "expected_outputs": [
+      "a pillar-by-pillar gap diagnosis for the target economy/sector",
+      "a consolidated, ownable action roadmap spanning all pillars with timelines",
+      "an explicit mapping between diagnosed gaps and the specific interventions intended to close them"
+    ],
+    "limitations": [
+      "The method structures and sequences interventions but does not itself determine how resources should be prioritized or traded off across pillars.",
+      "Assumes pillars can be meaningfully treated as complementary and separable; in ecosystems with strong pillar interdependence, sequential single-pillar fixes may be insufficient without simultaneous investment across pillars."
+    ],
+    "source_report_ids": [
+      "R000007"
+    ],
+    "source_evidence_ids": [
+      "E001496",
+      "E001497",
+      "E001509",
+      "E001510",
+      "E001511",
+      "E001518",
+      "E001522",
+      "E001525",
+      "E001634",
+      "E001655"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T08:00:33.073007Z",
+    "updated_at": "2026-08-24T08:00:33.073007Z",
+    "skill_id": "S000054",
+    "name": "Identify Persistent Overperformers and Underperformers Relative to a Peer Baseline",
+    "canonical_name": "Peer-Adjusted Performance Benchmarking",
+    "description": "A method for identifying which entities in a benchmarked set are performing better or worse than would be expected given a structural factor (such as development level, size, or resource base), and for distinguishing persistent structural outperformance/underperformance from one-off fluctuations by tracking the pattern across multiple periods.",
+    "framework_ids": [],
+    "skill_category": "competition",
+    "applicable_scenario": "identify_performance_outliers",
+    "industry_tags": [
+      "innovation",
+      "economic_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Relative to what would be expected given their structural characteristics, which entities in a peer set are consistently outperforming or underperforming, and what distinguishes the persistent cases from short-term noise?",
+    "required_inputs": [
+      "a performance score or metric for each entity in a comparable peer set",
+      "a structural factor usable to construct an expected-performance baseline (e.g., development level, size class, resource endowment)",
+      "multi-year historical values of the performance score for the same entities"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Group entities into peer cohorts based on the chosen structural factor, or build an expected-performance baseline (e.g., a peer average or regression estimate) conditioned on that factor."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Calculate each entity's residual: its actual performance minus the expected performance implied by its peer cohort or baseline."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Flag entities with a substantial positive residual as overperformers and those with a substantial negative residual as underperformers."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Repeat the residual calculation across multiple historical periods to determine whether each entity's over- or underperformance is persistent or a one-time fluctuation."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Aggregate the results by region, sector, or other grouping to identify which cohorts concentrate the largest share of persistent overperformers versus underperformers."
+      }
+    ],
+    "expected_outputs": [
+      "a list of entities classified as persistent overperformers and persistent underperformers",
+      "a cohort-level summary showing where overperformance or underperformance is concentrated"
+    ],
+    "limitations": [
+      "Requires a sufficiently large and comparable peer group to construct a meaningful expected-performance baseline; small or heterogeneous cohorts weaken the analysis.",
+      "Outperforming one's peer cohort does not necessarily mean an entity is competitive against leaders outside that cohort."
+    ],
+    "source_report_ids": [
+      "R000010"
+    ],
+    "source_evidence_ids": [
+      "E001702",
+      "E001703",
+      "E001728",
+      "E001729",
+      "E001730",
+      "E001791",
+      "E001801",
+      "E001815",
+      "E001816",
+      "E001817"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T08:00:33.146734Z",
+    "updated_at": "2026-08-24T08:00:33.146734Z",
+    "skill_id": "S000055",
+    "name": "Track Momentum Across the Stages of a Sequential Pipeline",
+    "canonical_name": "Multi-Stage Pipeline Momentum Tracking",
+    "description": "A method for diagnosing where slowdown or acceleration is occurring within a multi-stage system (e.g., an input-to-outcome value chain) by comparing each stage's short-term trend against its own long-term trend, in order to localize where systemic pressure is emerging rather than treating the system as a single aggregate trend.",
+    "framework_ids": [],
+    "skill_category": "growth",
+    "applicable_scenario": "track_pipeline_momentum",
+    "industry_tags": [
+      "innovation",
+      "economic_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "Across the sequential stages of a value-creation or ecosystem pipeline, where is momentum accelerating or decelerating, and what does the pattern of stage-level divergence reveal about the system's overall trajectory?",
+    "required_inputs": [
+      "a defined sequence of stages representing the pipeline being analyzed (e.g., input investment, intermediate process, adoption/output, ultimate impact)",
+      "a representative time-series metric for each stage, covering both a recent short-term period and a longer-term reference period"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Define the sequential stages of the pipeline under study and select at least one representative metric per stage."
+      },
+      {
+        "step_order": 2,
+        "instruction": "For each stage, compute the short-term growth or change rate and compare it against that same stage's long-term average growth rate to classify it as accelerating, stable, or decelerating."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Identify divergences between stages, such as a slowdown concentrated in early stages while later stages remain stable, to localize where systemic pressure is emerging within the pipeline."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Cross-reference the stage-level pattern with any known prior shocks or cycles affecting the system to judge whether the current trend is a reversion to a prior baseline or a new structural shift."
+      }
+    ],
+    "expected_outputs": [
+      "a stage-by-stage momentum scorecard (accelerating / stable / decelerating)",
+      "an assessment of which specific stage(s) are the primary source of overall system slowdown or acceleration"
+    ],
+    "limitations": [
+      "Requires consistent metric definitions and comparable time periods across stages; changes in measurement methodology between periods can create false signals.",
+      "Observing divergent trends between stages does not establish a causal link between them."
+    ],
+    "source_report_ids": [
+      "R000010"
+    ],
+    "source_evidence_ids": [
+      "E001698",
+      "E001699",
+      "E001700",
+      "E001701",
+      "E001705",
+      "E001706",
+      "E001710",
+      "E001711",
+      "E001713",
+      "E001732",
+      "E001734",
+      "E001741",
+      "E001742"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T08:00:33.170195Z",
+    "updated_at": "2026-08-24T08:00:33.170195Z",
+    "skill_id": "S000056",
+    "name": "Test Composite Ranking Robustness by Allowing Entity-Optimized Weights",
+    "canonical_name": "Benefit-of-the-Doubt Weighting Robustness Check",
+    "description": "A method for testing how sensitive a fixed-weight composite ranking is to the choice of weights, by mathematically re-optimizing each entity's weights (within reasonable bounds) to maximize its own score, then comparing the resulting rank to the original fixed-weight rank to reveal which entities are most sensitive to methodological assumptions and which dimensions represent each entity's greatest relative strength.",
+    "framework_ids": [],
+    "skill_category": "risk",
+    "applicable_scenario": "assess_ranking_robustness",
+    "industry_tags": [
+      "innovation",
+      "economic_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "How sensitive is a multi-dimensional composite ranking to the fixed weighting scheme used to build it, and which entities' positions change most when each is instead allowed to weight its own strongest dimensions?",
+    "required_inputs": [
+      "entity-level scores across multiple comparable performance dimensions",
+      "the fixed weighting scheme originally used to produce the composite ranking",
+      "reasonable upper and lower bounds on how much weight any single dimension can receive, to prevent unrealistic zero- or full-weighting"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "For each entity, solve for the set of dimension weights (within the specified bounds) that maximizes its own composite score."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Compare each entity's optimized score and rank to its original fixed-weight score and rank."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Identify the entities whose rank shifts the most between the fixed-weight and optimized-weight approaches, marking them as most sensitive to the weighting assumptions."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Examine which dimensions each entity leans on most heavily under its optimized weighting to reveal its comparative area of strength."
+      },
+      {
+        "step_order": 5,
+        "instruction": "Compute the overall correlation between the fixed-weight ranking and the optimized-weight ranking as a global robustness indicator for the composite index."
+      }
+    ],
+    "expected_outputs": [
+      "a side-by-side comparison of fixed-weight versus optimized-weight scores and ranks per entity",
+      "a list of entities most sensitive to weighting assumptions",
+      "an overall correlation statistic summarizing the composite index's robustness"
+    ],
+    "limitations": [
+      "Requires clean, comparable dimension-level data and the ability to run a formal weight-optimization (e.g., linear programming); not usable with incomplete or non-comparable data.",
+      "A high correlation between fixed- and flexible-weight rankings indicates statistical robustness but does not validate whether the underlying dimensions are conceptually complete or meaningful."
+    ],
+    "source_report_ids": [
+      "R000010"
+    ],
+    "source_evidence_ids": [
+      "E001892",
+      "E001893",
+      "E001894",
+      "E001895",
+      "E001896",
+      "E001897",
+      "E001898",
+      "E001899"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  },
+  {
+    "created_at": "2026-08-24T08:00:33.190099Z",
+    "updated_at": "2026-08-24T08:00:33.190099Z",
+    "skill_id": "S000057",
+    "name": "Classify a Mission-Driven Organization's Impact Pathway to Align Innovation and Measurement",
+    "canonical_name": "Impact Pathway Classification for Mission-Driven Organizations",
+    "description": "A classification method for organizations that pursue both social/environmental impact and financial sustainability, identifying which of several distinct pathways (direct customer service, workforce inclusion, product/service innovation, or ecosystem mobilization) best describes how the organization generates impact, and using that classification to determine which innovation activities and impact metrics are most relevant.",
+    "framework_ids": [],
+    "skill_category": "business_model",
+    "applicable_scenario": "classify_impact_pathway",
+    "industry_tags": [
+      "innovation",
+      "economic_development"
+    ],
+    "company_stage_tags": [],
+    "business_model_tags": [],
+    "core_question": "For an organization pursuing both mission impact and financial viability, which underlying pathway does it primarily use to create impact, and what does that pathway imply for where it should focus innovation effort and how it should measure success?",
+    "required_inputs": [
+      "a description of who the organization's intended beneficiaries are and how value or impact reaches them",
+      "information on the organization's revenue/financing composition and its current innovation or process-development activities"
+    ],
+    "analysis_steps": [
+      {
+        "step_order": 1,
+        "instruction": "Determine the primary mechanism through which the organization creates impact: serving underserved customers directly, hiring and upskilling a marginalized workforce, producing a mission-aligned product or service, or mobilizing a wider ecosystem of external stakeholders."
+      },
+      {
+        "step_order": 2,
+        "instruction": "Classify the organization into the pathway (or combination of pathways) that best matches this primary mechanism."
+      },
+      {
+        "step_order": 3,
+        "instruction": "Based on the assigned pathway, identify which innovation activities are likely to matter most (e.g., process innovation for reaching new customer segments, employee training and process redesign for a workforce-inclusion model, product/R&D innovation for a product-led model, or network- and coalition-building for an ecosystem model)."
+      },
+      {
+        "step_order": 4,
+        "instruction": "Select an impact measurement approach matched to the pathway (e.g., beneficiaries reached and their downstream outcomes; employees hired, wages and career progression; volume of product/service adopted and its substitution effect; or systemic indicators such as policy or network change for ecosystem models)."
+      }
+    ],
+    "expected_outputs": [
+      "a pathway classification for the organization",
+      "a prioritized set of innovation activities aligned to that pathway",
+      "a recommended set of impact metrics matched to the pathway"
+    ],
+    "limitations": [
+      "Many organizations blend more than one pathway simultaneously, so forcing a single classification can oversimplify a hybrid model.",
+      "The method identifies what should be measured but does not by itself resolve the broader difficulty of standardizing impact measurement across different organizations."
+    ],
+    "source_report_ids": [
+      "R000010"
+    ],
+    "source_evidence_ids": [
+      "E001837",
+      "E001855",
+      "E001858",
+      "E001859",
+      "E001861",
+      "E001863",
+      "E001865",
+      "E001867",
+      "E001869"
+    ],
+    "similar_skill_ids": [],
+    "merge_history": [],
+    "reuse_score": 3,
+    "confidence": 0.7,
+    "review_status": "unreviewed",
+    "extracted_by": {
+      "model": "~anthropic/claude-sonnet-latest",
+      "prompt_version": "skill_v1"
+    },
+    "version": "1.0"
+  }
+]

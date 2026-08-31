@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategy-policy-market-report/report-schema.json",
+  "title": "Strategy Policy Market Report Output Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request",
+    "sections",
+    "sources",
+    "limitations",
+    "rendering",
+    "markdown"
+  ],
+  "properties": {
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "company",
+        "business_unit",
+        "geography",
+        "period",
+        "output_format"
+      ],
+      "properties": {
+        "company": {
+          "type": "string",
+          "minLength": 1
+        },
+        "business_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geography": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "output_format": {
+          "type": "string",
+          "enum": [
+            "markdown",
+            "html",
+            "pdf"
+          ]
+        }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "executive_summary",
+        "scope_and_assumptions",
+        "policy_analysis",
+        "commercial_analysis",
+        "integrated_implications",
+        "recommendations",
+        "methodology",
+        "sources"
+      ],
+      "properties": {
+        "executive_summary": {
+          "type": "string"
+        },
+        "scope_and_assumptions": {
+          "type": "string"
+        },
+        "policy_analysis": {
+          "type": "string"
+        },
+        "commercial_analysis": {
+          "type": "string"
+        },
+        "integrated_implications": {
+          "type": "string"
+        },
+        "recommendations": {
+          "type": "string"
+        },
+        "methodology": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "string"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "category",
+          "claim",
+          "url",
+          "date",
+          "source_name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "policy",
+              "commercial"
+            ]
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "date": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_name": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rendering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested_format",
+        "produced_format",
+        "markdown_only"
+      ],
+      "properties": {
+        "requested_format": {
+          "type": "string",
+          "enum": [
+            "markdown",
+            "html",
+            "pdf"
+          ]
+        },
+        "produced_format": {
+          "type": "string",
+          "const": "markdown"
+        },
+        "markdown_only": {
+          "type": "boolean"
+        }
+      }
+    },
+    "markdown": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

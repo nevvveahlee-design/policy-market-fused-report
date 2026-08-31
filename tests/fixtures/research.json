@@ -1,0 +1,31 @@
+{
+  "summary": "Deterministic shared evidence fixture for a fictional industrial automation company.",
+  "policy_methods": [
+    {
+      "skill_id": "S000037",
+      "name": "Technology Risk Gap Analysis",
+      "rationale": "Useful for assessing connected equipment exposure and compliance gaps."
+    }
+  ],
+  "policy_evidence": [
+    {
+      "id": "policy-1",
+      "claim": "Connected factory equipment faces stricter cybersecurity expectations.",
+      "url": "https://example.com/policy-guidance",
+      "date": "2026-08-01",
+      "source_name": "Example Policy Agency"
+    }
+  ],
+  "commercial_evidence": [
+    {
+      "id": "commercial-1",
+      "claim": "Industrial automation demand remains strong in the target segment.",
+      "url": "https://example.com/market-demand",
+      "date": "2026-08-05",
+      "source_name": "Example Market Research"
+    }
+  ],
+  "limitations": [
+    "This fixture does not rely on live web access."
+  ]
+}
