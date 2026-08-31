@@ -218,6 +218,92 @@ def test_build_report_matches_schema_shape_and_marks_markdown_only_rendering():
     assert "HTML was requested" in report["limitations"][0]
 
 
+def sample_commercial_estimate(**overrides):
+    estimate = {
+        "label": "Bottom-up SOM",
+        "value": "~$810M",
+        "method": "addressable accounts x adoption rate x realistic win rate",
+        "assumptions": ["category mix assumed at 45% of addressable spend"],
+        "load_bearing_assumption": "realistic win rate of 15%",
+        "verification": {"status": "independently re-derived", "note": "matched within 5%"},
+    }
+    estimate.update(overrides)
+    return estimate
+
+
+def test_commercial_estimates_absent_leaves_existing_output_unchanged():
+    module = load_module()
+    catalog = module.load_catalog(
+        ROOT / "skills" / "strategy-policy-market-report" / "references" / "method-catalog.json"
+    )
+
+    with_field = module.build_report(sample_request(), sample_research(commercial_estimates=[]), catalog)
+    without_field = module.build_report(sample_request(), sample_research(), catalog)
+
+    assert with_field["sections"]["commercial_analysis"] == without_field["sections"]["commercial_analysis"]
+    assert "Quantitative estimates" not in without_field["sections"]["commercial_analysis"]
+
+
+def test_commercial_estimates_render_with_load_bearing_assumption_and_verification():
+    module = load_module()
+    catalog = module.load_catalog(
+        ROOT / "skills" / "strategy-policy-market-report" / "references" / "method-catalog.json"
+    )
+
+    report = module.build_report(
+        sample_request(),
+        sample_research(commercial_estimates=[sample_commercial_estimate()]),
+        catalog,
+    )
+
+    section = report["sections"]["commercial_analysis"]
+    assert "Quantitative estimates" in section
+    assert "Bottom-up SOM: ~$810M" in section
+    assert "addressable accounts x adoption rate x realistic win rate" in section
+    assert "category mix assumed at 45% of addressable spend" in section
+    assert "Load-bearing assumption: realistic win rate of 15%" in section
+    assert "Verification: independently re-derived -- matched within 5%" in section
+    # policy analysis must stay untouched by the new commercial-only field
+    assert "Quantitative estimates" not in report["sections"]["policy_analysis"]
+
+
+def test_commercial_estimate_without_verification_says_so_explicitly():
+    module = load_module()
+    catalog = module.load_catalog(
+        ROOT / "skills" / "strategy-policy-market-report" / "references" / "method-catalog.json"
+    )
+    estimate = sample_commercial_estimate()
+    del estimate["verification"]
+
+    report = module.build_report(
+        sample_request(),
+        sample_research(commercial_estimates=[estimate]),
+        catalog,
+    )
+
+    assert "Verification: not independently re-derived for this run." in report["sections"]["commercial_analysis"]
+
+
+def test_commercial_estimate_missing_load_bearing_assumption_is_rejected():
+    module = load_module()
+    catalog = module.load_catalog(
+        ROOT / "skills" / "strategy-policy-market-report" / "references" / "method-catalog.json"
+    )
+    estimate = sample_commercial_estimate()
+    del estimate["load_bearing_assumption"]
+
+    try:
+        module.build_report(
+            sample_request(),
+            sample_research(commercial_estimates=[estimate]),
+            catalog,
+        )
+    except ValueError as exc:
+        assert "load_bearing_assumption is required" in str(exc)
+    else:
+        raise AssertionError("Expected an estimate with no load-bearing assumption to be rejected")
+
+
 def test_cli_writes_markdown_with_required_headings(tmp_path):
     request_path = tmp_path / "request.json"
     research_path = tmp_path / "research.json"
