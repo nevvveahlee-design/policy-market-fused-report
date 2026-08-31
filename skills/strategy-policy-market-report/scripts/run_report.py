@@ -82,11 +82,70 @@ def _normalize_research(research):
         "commercial_evidence": _normalize_evidence_list(
             research.get("commercial_evidence", []), "commercial"
         ),
+        "commercial_estimates": _normalize_commercial_estimates(
+            research.get("commercial_estimates", [])
+        ),
         "limitations": _normalize_string_list(research.get("limitations", []), "limitations"),
     }
 
     if not isinstance(normalized["policy_methods"], list):
         raise ValueError("policy_methods must be a list")
+    return normalized
+
+
+def _normalize_commercial_estimates(records):
+    """Optional structured input for the "Commercial analysis rigor" rules in
+    SKILL.md (bottom-up sizing, unit economics, scenario business case) --
+    for a host that supplies estimates as data rather than an LLM drafting
+    the analysis prose directly. Absent or empty input changes nothing about
+    existing report output."""
+    if records is None:
+        return []
+    if not isinstance(records, list):
+        raise ValueError("commercial_estimates must be a list")
+
+    normalized = []
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            raise ValueError(f"commercial_estimates[{index}] must be an object")
+        label = record.get("label")
+        value = record.get("value")
+        method = record.get("method")
+        load_bearing = record.get("load_bearing_assumption")
+        if not isinstance(label, str) or not label.strip():
+            raise ValueError(f"commercial_estimates[{index}].label is required")
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"commercial_estimates[{index}].value is required")
+        if not isinstance(method, str) or not method.strip():
+            raise ValueError(f"commercial_estimates[{index}].method is required")
+        if not isinstance(load_bearing, str) or not load_bearing.strip():
+            raise ValueError(
+                f"commercial_estimates[{index}].load_bearing_assumption is required "
+                "-- every estimate must name the one assumption that would flip the conclusion if wrong"
+            )
+        assumptions = _normalize_string_list(
+            record.get("assumptions", []), f"commercial_estimates[{index}].assumptions"
+        )
+        verification = record.get("verification")
+        verification_note = None
+        if verification is not None:
+            if not isinstance(verification, dict):
+                raise ValueError(f"commercial_estimates[{index}].verification must be an object")
+            status = verification.get("status")
+            if not isinstance(status, str) or not status.strip():
+                raise ValueError(f"commercial_estimates[{index}].verification.status is required")
+            note = _clean_optional_text(verification.get("note"))
+            verification_note = status.strip() + (f" -- {note}" if note else "")
+        normalized.append(
+            {
+                "label": label.strip(),
+                "value": value.strip(),
+                "method": method.strip(),
+                "assumptions": assumptions,
+                "load_bearing_assumption": load_bearing.strip(),
+                "verification_note": verification_note,
+            }
+        )
     return normalized
 
 
@@ -164,9 +223,9 @@ def build_report(request, research, catalog):
             normalized_research["policy_evidence"],
             limitations,
         ),
-        "commercial_analysis": _build_analysis_section(
-            "commercial",
+        "commercial_analysis": _build_commercial_analysis(
             normalized_research["commercial_evidence"],
+            normalized_research["commercial_estimates"],
             limitations,
         ),
         "integrated_implications": _build_integrated_implications(
@@ -282,6 +341,30 @@ def _build_analysis_section(category, evidence_items, limitations):
             f"- {item['claim']} ({item['source_name']}; {item['date']}; {item['url']})"
         )
     return "\n".join(lines)
+
+
+def _build_commercial_analysis(evidence_items, estimates, limitations):
+    """Same evidence write-up as _build_analysis_section, with an optional
+    "Quantitative estimates" block in front when the host supplied
+    commercial_estimates (see SKILL.md "Commercial analysis rigor" and
+    "Verifying the headline numbers") -- e.g. a bottom-up sizing, a unit
+    economics result, or a scenario-business-case verdict, each carrying its
+    load-bearing assumption and verification status."""
+    body = _build_analysis_section("commercial", evidence_items, limitations)
+    if not estimates:
+        return body
+
+    lines = ["Quantitative estimates:"]
+    for estimate in estimates:
+        lines.append(f"- **{estimate['label']}: {estimate['value']}** ({estimate['method']})")
+        for assumption in estimate["assumptions"]:
+            lines.append(f"  - Assumption: {assumption}")
+        lines.append(f"  - Load-bearing assumption: {estimate['load_bearing_assumption']}")
+        if estimate["verification_note"]:
+            lines.append(f"  - Verification: {estimate['verification_note']}")
+        else:
+            lines.append("  - Verification: not independently re-derived for this run.")
+    return "\n".join(lines) + "\n\n" + body
 
 
 def _build_integrated_implications(policy_evidence, commercial_evidence, limitations):
