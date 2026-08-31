@@ -11,23 +11,15 @@ The unified skill is provider-neutral in its workflow and output contract:
 
 ## Install
 
+**This automated install only works with [Claude Code](https://claude.com/claude-code)** — the `npx` command just copies files into a `.claude/skills/` folder, which only Claude Code reads. If you don't have Claude Code, skip to "Don't have Claude Code?" below instead.
+
+This package is not published to the npm registry, so `npx policy-market-fused-report` will fail with a 404 unless you run it from inside a local clone of this repo. Steps:
+
 ```bash
-npx policy-market-fused-report
-npx policy-market-fused-report --project
-```
-
-The command-line contract stays the same:
-
-- default install target: `~/.claude/skills/`
-- project install target: `./.claude/skills/`
-
-The installed skill directory is:
-
-```text
-strategy-policy-market-report
-```
-
-Restart your host application after install if it caches local skill directories.
+git clone https://github.com/nevvveahlee-design/policy-market-fused-report.git
+cd policy-market-fused-report
+npx policy-market-fused-report            # installs to ~/.claude/skills/ (all projects)
+npx policy-market-fused-report --project  # installs to ./.claude/skills/ (current project only)
 
 ## Don't have Claude Code?
 
