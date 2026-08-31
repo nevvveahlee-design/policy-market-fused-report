@@ -29,6 +29,29 @@ strategy-policy-market-report
 
 Restart your host application after install if it caches local skill directories.
 
+## Don't have Claude Code?
+
+The `npx` install command only works if you have Claude Code (or another
+tool that reads `.claude/skills/`) — it just copies files into that folder,
+which nothing else looks at.
+
+If you're using ChatGPT, Gemini, or another AI tool instead:
+
+1. Open `skills/strategy-policy-market-report/SKILL.md` in this repo and
+   copy its content into that tool's custom instructions / system prompt.
+2. If the tool supports file uploads, also attach
+   `skills/strategy-policy-market-report/references/method-catalog.json`
+   and `evidence.json` as reference material.
+3. Trigger it by describing what you want in plain language, the same way
+   you would with Claude Code — you'll just need to paste the instructions
+   in again each new conversation, since there's no persistent "skill"
+   mechanism outside Claude Code.
+
+Optional HTML/PDF rendering (`scripts/build_deck.py`) still needs an
+environment that can run Python and, for PDF, has Chrome/Chromium — most
+chat-only AI tools can't do this themselves. Markdown output will still
+work anywhere the AI can follow written instructions.
+
 ## Use
 
 Once installed, ask your agent for a company report in plain language, for example:
